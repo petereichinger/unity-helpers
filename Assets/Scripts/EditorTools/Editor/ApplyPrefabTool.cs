@@ -7,7 +7,7 @@ namespace UnityHelpers.EditorTools.Editor {
 	/// <summary>Apply the changes to all selected prefabs.</summary>
 	public class ApplyPrefabTool {
 
-		[MenuItem("Tools/Apply Selected Prefabs")]
+		[MenuItem("UnityHelpers/Apply Selected Prefabs")]
 		private static void ApplySelectedPrefabs() {
 			foreach (GameObject go in Selection.gameObjects) {
 				if (!go) {
