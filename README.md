@@ -26,3 +26,9 @@ A singleton pattern implemenation is found under `Scripts/Singleton/Singleton.cs
 
 An extension for getting or adding a component to a gameobject is located in `Scripts/Components/ComponentExtensions`. This includes extension methods for `GameObject` and `Component`.
 
+## SerializedProperty Array Helpers
+
+In the folder `Assets/Scripts/EditorHelpers/Editor/` are the following classes that help with handling array SerializedProperties
+
+- *ArrayHelpers*: Provides helper methods for adding elements to `SerializedProperty`-Objects that are arrays
+- *ArrayIterator*: Iterator implementation for `SerializedProperty`-Arrays (you can use `foreach` with this)
