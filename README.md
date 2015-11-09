@@ -14,6 +14,10 @@ The class is `Scripts/EditorTools/Editor/MassSetTags.cs` and it can be accessed 
 
 Tool that applies changes to all selected prefabs. The class is located at `Scripts/EditorTools/Editor/ApplyPrefabTool.cs` and it can be accessed via `UnityHelpers -> Apply Selected Prefabs`.
 
+## Open Git Bash Tool
+
+Tool that opens git bash for this project. Only works on Windows and only if git bash is installed in the default location (either `C:\Program Files\Git\git-bash.exe` or `C:\Program Files(x86)\Git\git-bash.exe`). Code for this tool is found in `Scripts/EditorTools/Editor/OpenGitBashTool.cs`
+
 ## Singleton
 
 A singleton pattern implemenation is found under `Scripts/Singleton/Singleton.cs` the full class name is `UnityHelpers.Singleton.Singleton<T>`.
