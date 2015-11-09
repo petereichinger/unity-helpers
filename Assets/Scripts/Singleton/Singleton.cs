@@ -1,41 +1,44 @@
 using UnityEngine;
 
-/// <summary>Singleton pattern. Should only be used by <see cref="Toolbox"/>.</summary>
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour {
-	private static T _instance;
+namespace UnityHelpers.Singleton {
 
-	private static object _lock = new object();
+	/// <summary>Singleton pattern.</summary>
+	public class Singleton<T> : MonoBehaviour where T : MonoBehaviour {
+		private static T _instance;
 
-	public static T Instance {
-		get {
-			lock (_lock) {
-				if (_instance == null) {
-					_instance = (T)FindObjectOfType(typeof(T));
+		private static object _lock = new object();
 
-					if (FindObjectsOfType(typeof(T)).Length > 1) {
-						Debug.LogError("[Singleton] Something went really wrong " +
-							" - there should never be more than 1 singleton!" +
-							" Reopening the scene might fix it.");
-						return _instance;
-					}
-
+		public static T Instance {
+			get {
+				lock (_lock) {
 					if (_instance == null) {
-						GameObject singleton = new GameObject();
-						_instance = singleton.AddComponent<T>();
-						singleton.name = "(singleton) " + typeof(T).ToString();
+						_instance = (T)FindObjectOfType(typeof(T));
 
-						DontDestroyOnLoad(singleton);
+						if (FindObjectsOfType(typeof(T)).Length > 1) {
+							Debug.LogError("[Singleton] Something went really wrong " +
+										   " - there should never be more than 1 singleton!" +
+										   " Reopening the scene might fix it.");
+							return _instance;
+						}
 
-						Debug.Log("[Singleton] An instance of " + typeof(T) +
-							" is needed in the scene, so '" + singleton +
-							"' was created with DontDestroyOnLoad.");
-					} else {
-						Debug.Log("[Singleton] Using instance already created: " +
-							_instance.gameObject.name);
+						if (_instance == null) {
+							GameObject singleton = new GameObject();
+							_instance = singleton.AddComponent<T>();
+							singleton.name = "(singleton) " + typeof(T).ToString();
+
+							DontDestroyOnLoad(singleton);
+
+							Debug.Log("[Singleton] An instance of " + typeof(T) +
+									  " is needed in the scene, so '" + singleton +
+									  "' was created with DontDestroyOnLoad.");
+						} else {
+							Debug.Log("[Singleton] Using instance already created: " +
+									  _instance.gameObject.name);
+						}
 					}
-				}
 
-				return _instance;
+					return _instance;
+				}
 			}
 		}
 	}
