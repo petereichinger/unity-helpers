@@ -2,7 +2,12 @@ using UnityEngine;
 
 namespace UnityHelpers.Singleton {
 
-	/// <summary>Singleton pattern.</summary>
+	/// <summary>
+	/// Singleton pattern. To use this class make a new MonoBehaviour that inherits from Singleton
+	/// like this:
+	/// 
+	/// <c>public class MyNewClass : Singleton&lt;MyNewClass&gt;</c>
+	/// </summary>
 	public class Singleton<T> : MonoBehaviour where T : MonoBehaviour {
 		private static T _instance;
 
