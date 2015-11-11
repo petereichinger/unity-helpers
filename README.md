@@ -1,9 +1,8 @@
 # unity-helpers
-Helper classes that are useful for Unity projects
-
-I'll add helper classes that I often use in Unity projects
+Helper classes and tools that are useful for Unity projects.
 
 # Description
+Currently this project is used with version 5.2 of Unity. This may be incompatible with other versions. If there is any bug, please open an Issue :thumbsup:.
 
 ## Editor Tools
 
