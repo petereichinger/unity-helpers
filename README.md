@@ -16,7 +16,7 @@ Tool that applies changes to all selected prefabs. The class is located at `Scri
 
 ## Open Git Bash Tool
 
-Tool that opens git bash for this project. Only works on Windows and only if git bash is installed in the default location (either `C:\Program Files\Git\git-bash.exe` or `C:\Program Files(x86)\Git\git-bash.exe`). Code for this tool is found in `Scripts/EditorTools/Editor/OpenGitBashTool.cs`
+Tool that opens git bash for this project. Only works on Windows and only if git bash is installed in the default location (either `C:\Program Files\Git\git-bash.exe` or `C:\Program Files(x86)\Git\git-bash.exe`). Code for this tool is found in `Scripts/EditorTools/Editor/OpenGitBashTool.cs` and it can be accessed via `Unity Helpers -> Apply Selected Prefabs`
 
 ## Singleton
 
