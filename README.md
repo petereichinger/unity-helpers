@@ -18,6 +18,10 @@ Tool that applies changes to all selected prefabs. The class is located at `Scri
 
 Tool that opens git bash for this project. Only works on Windows and only if git bash is installed in the default location (either `C:\Program Files\Git\git-bash.exe` or `C:\Program Files(x86)\Git\git-bash.exe`). Code for this tool is found in `Scripts/EditorTools/Editor/OpenGitBashTool.cs` and it can be accessed via `Unity Helpers -> Apply Selected Prefabs`
 
+## Remove hidden objects
+
+Tool to remove hidden objects that are in the hierarchy. The code is in the file `UnityHelpers/EditorTools/Editor/RemoveHiddenObjectsTool.cs`. An in depth description of the tool follows but should not be necessary. The Menu command is `Unity Helpers -> Remove hidden objects`.
+
 ## Singleton
 
 A singleton pattern implemenation is found under `Scripts/Singleton/Singleton.cs` the full class name is `UnityHelpers.Singleton.Singleton<T>`.
